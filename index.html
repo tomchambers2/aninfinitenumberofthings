@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head name="viewport" content="width=device-width, initial-scale=1">
+	<meta charset="UTF-8">
+	<title>Things to do before you die</title>
+	<!-- bower:css -->
+	<link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css" />
+	<!-- endbower -->
+	<link rel="stylesheet" href="styles/main.css">
+</head>
+<body>
+	<div class="about" data-toggle="modal" data-target="#about-modal">YOU WHAT MATE?</div>
+
+	<div class="modal fade" id="about-modal" tabindex="-1" role="dialog" arial-labelledby="about-modal-label" aria-hidden="true">
+		<div class="modal-dialog">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h1>What is this monstrosity?</h1>
+				</div>
+				<div class="modal-body">
+					<p>This page generates an infinite number of pseudo life goals using a markov chain algorithm. It picks a sequence of words based on what is statistically likely to occur. Sometimes it will be nonsense, sometimes it will be amusing. It will rarely be less specific and meaningful than the real goals they are based on.</p>
+					<p>The database of 'things' is made up of real bucket list items collected from the internet. If you want to contribute to the base list of things you can make a pull request on github: https://github.com/tomchambers2/aninfinitenumberofthings</p>
+					<p>It was made by Tom Chambers, a man who has achieved pitifully few of his life goals and is afraid of dying. If you want to hire me for front end development work, you can check out <a href="http://tomchambers.me" target="_blank">portfolio website</a> where you can see other things I've done.</p>
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+				</div>
+			</div>
+		</div>
+	</div>
+	
+	<div class="top">
+		<div class="container">
+			<div class=""><img class="logo" src="images/logo.png" alt=""></div>
+			<p>Death is a major milestone. Many people say on their deathbed say they wish they'd managed to do &infin; things while they had the chance.</p>
+			<p>We've compiled a handy list of 'things' you really <strong>must</strong> do. Don't even think about settling down and enjoying life until you've fulfilled your obligations.</p>
+			<br>
+		</div>
+	</div>
+	<div class="down">
+		<img src="images/down.png" alt="">
+	</div>
+	<div class="bottom">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-3 left-col">
+					<section class="things-done">
+						<h2>Things you've done</h2>
+						<table class="table">
+							<tbody data-bind="foreach: thingModel">
+								<!-- ko if: done -->
+								<tr class="done" data-bind="css: { done: done }">
+									<td><input type="checkbox" data-bind="checked: done"></td>
+									<td>
+										<span data-bind="text: thing"></span>
+									</td>
+								</tr>
+								<!-- /ko -->
+							</tbody>
+						</table>
+					</section>
+					<section class="hidden-xs polaroids">
+					<div class="polaroid">
+						<img src="images/bittenbydolphin.jpg" alt="">
+					</div>
+					<div class="polaroid">
+						<img src="images/falloffelephant.jpg" alt="">
+					</div>
+					<div class="polaroid">
+						<img src="images/capsize.jpg" alt="">
+					</div>
+					<div class="polaroid">
+						<img src="images/tajmahal.jpg" alt="">
+					</div>
+					<div class="polaroid">
+						<img src="images/lion.jpg" alt="">
+					</div>
+					<div class="polaroid">
+						<img src="images/surfing.jpg" alt="">
+					</div>
+					</section>
+				</div>
+				<div class="col-md-9">
+					<h2>Potential things to do</h2>
+					<table class="table">
+						<tbody data-bind="foreach: thingModel">
+							<tr class="done" data-bind="css: { done: done }">
+								<td><input type="checkbox" data-bind="checked: done"></td>
+								<td>
+									<span data-bind="text: thing"></span>
+								</td>
+							</tr>
+						</tbody>
+					</table>
+
+					<center><img class="skull" src="images/skull.png" alt="Skull icon"></center>
+				</div>
+			</div>
+		</div>
+	</div>
+	
+	<!-- bower:js -->
+	<script src="bower_components/jquery/dist/jquery.js"></script>
+	<script src="bower_components/bootstrap/dist/js/bootstrap.js"></script>
+	<script src="bower_components/knockout/dist/knockout.js"></script>
+	<script src="bower_components/jquery.visible/jquery.visible.js"></script>
+	<!-- endbower -->
+	<script src="scripts/viewmodel.js"></script>
+	<script src="scripts/main.js"></script>
+	<script>
+		ko.applyBindings(thingModel);
+	</script>
+</body>
+</html>
