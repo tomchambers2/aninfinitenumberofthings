@@ -1,0 +1,23 @@
+{
+  "name": "infinitethings",
+  "version": "0.0.1",
+  "authors": [
+    "Tom Chambers <tom.chambers@gmail.com>"
+  ],
+  "license": "MIT",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "app/bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "~2.1.1",
+    "bootstrap": "~3.2.0",
+    "knockout": "~3.2.0",
+    "jquery.visible": "~1.1.0"
+  }
+}

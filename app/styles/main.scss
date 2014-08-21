@@ -1,0 +1,63 @@
+body {
+	background-repeat: repeat-x;
+	background-position: center top;
+	background-position: cover;
+	background-color: #ECE7E3;
+
+}
+.container {
+	padding: 0;
+}
+
+@import url(http://fonts.googleapis.com/css?family=Indie+Flower);
+body {
+	font-family: 'Indie Flower', cursive;	
+}
+
+.logo {
+	background: url(../images/logo.png) no-repeat;
+	height: 166px;
+}
+
+.top {
+	background-image: url(../images/beachbg-upper.jpg);
+	background-repeat: repeat-x;
+	color: #E8E3C4;
+	font-size: 1.75em;
+	font-weight: 300;
+	text-align: justify;
+}
+.top .container {
+	width: 65%;
+}
+
+.bottom {
+	background-image: url(../images/beachbg-lower.jpg);
+	background-repeat: repeat-x;
+	padding-top: 230px;
+	font-size: 23px;
+}
+
+.polaroid {
+	border: 10px solid #fff;
+}
+
+table {
+  border-collapse: collapse;
+}
+
+tr.done td {
+  position: relative;
+  background-color: #E3D5CC;
+  color: #898989;
+  text-decoration: line-through;
+}
+
+tr.done td:before {
+  content: ' ';
+  position: absolute;
+  left: 0;
+  top: 50%;
+  width: 100%;
+  //border-bottom: 2px solid #747465;
+}
