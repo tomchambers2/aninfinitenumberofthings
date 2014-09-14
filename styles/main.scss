@@ -3,7 +3,6 @@ body {
 	background-position: center top;
 	background-position: cover;
 	background-color: #ECE7E3;
-
 }
 
 .about {
@@ -62,6 +61,7 @@ body {
 .bottom {
 	background-image: url(../images/beachbg-lower.jpg);
 	background-repeat: repeat-x;
+	
 	padding-top: 230px;
 	font-size: 23px;
 }
@@ -71,6 +71,12 @@ body {
 }*/
 
 @media only screen and (min-width:992px) {
+	.top {
+		background-size: 100% auto;
+	}
+	.bottom {
+		background-size: 100% auto;
+	}
 	.things-done {
 		padding: 10px;
 		padding-top: 0px;
